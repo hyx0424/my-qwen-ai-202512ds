@@ -1,30 +1,30 @@
 {
-  "name": "nextchat",
-  "private": false,
-  "license": "mit",
-  "scripts": {
-    "mask": "npx tsx app/masks/build.ts",
-    "mask:watch": "npx watch \"yarn mask\" app/masks",
-    "dev": "concurrently -r \"yarn run mask:watch\" \"next dev\"",
-    "build": "yarn mask && cross-env BUILD_MODE=standalone next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "yarn mask && cross-env BUILD_MODE=export BUILD_APP=1 next build",
-    "export:dev": "concurrently -r \"yarn mask:watch\"  \"cross-env BUILD_MODE=export BUILD_APP=1 next dev\"",
-    "app:dev": "concurrently -r \"yarn mask:watch\" \"yarn tauri dev\"",
+  "名称": "聊天记录",
+  "私有"： false，
+  "许可证": "mit",
+  "脚本": {
+    "掩码": "npx tsx app/masks/build.ts",
+    "掩码:监视": "npx watch \"yarn mask\" app/masks",
+    "开发": "同时 -r \"yarn run mask:watch\" \"next dev\"",
+    "构建": "yarn mask & cross-env BUILD_MODE=standalone next build",
+    "开始": "下次开始",
+    "lint"："下一个 lint"，
+    "导出": "yarn mask && cross-env BUILD_MODE=export BUILD_APP=1 next build",
+    "出口:开发": "concurrently -r \"yarn mask:watch\"  \"cross-env BUILD_MODE=出口 BUILD_APP=1 next dev\"",
+    "应用:开发": "同时运行 \"yarn mask:watch\" \"yarn tauri dev\"",
     "app:build": "yarn mask && yarn tauri build",
-    "app:clear": "yarn tauri dev",
-    "prompts": "node ./scripts/fetch-prompts.mjs",
-    "prepare": "husky install",
-    "proxy-dev": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev",
-    "test": "node --no-warnings --experimental-vm-modules $(yarn bin jest) --watch",
-    "test:ci": "node --no-warnings --experimental-vm-modules $(yarn bin jest) --ci"
+    "清除缓存": "yarn tauri dev",
+    "提示": "node ./scripts/fetch-prompts.mjs",
+    "准备": "husky 安装",
+    "代理开发": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev",
+    "测试": "node --no-warnings --experimental-vm-modules $(yarn bin jest) --watch",
+    "测试:持续集成": "node --no-warnings --experimental-vm-modules $(yarn bin jest) --ci"
   },
-  "dependencies": {
+  "依赖项": {
     "@fortaine/fetch-event-source": "^3.0.6",
-    "@hello-pangea/dnd": "^16.5.0",
+    "@hello-pangea/dnd"："^16.5.0"，
     "@modelcontextprotocol/sdk": "^1.0.4",
-    "@next/third-parties": "^14.1.0",
+    "@next/第三方": "^14.1.0",
     "@svgr/webpack": "^6.5.1",
     "@vercel/analytics": "^0.1.11",
     "@vercel/speed-insights": "^1.0.2",
@@ -32,8 +32,8 @@
     "clsx": "^2.1.1",
     "emoji-picker-react": "^4.9.2",
     "fuse.js": "^7.0.0",
-    "heic2any": "^0.0.4",
-    "html-to-image": "^1.11.11",
+    "heic2any"："^0.0.4"，
+    "html-to-image"："^1.11.11"，
     "idb-keyval": "^6.2.1",
     "lodash-es": "^4.17.21",
     "markdown-to-txt": "^2.0.1",
@@ -42,6 +42,7 @@
     "next": "^14.1.1",
     "node-fetch": "^3.3.1",
     "openapi-client-axios": "^7.5.5",
+    "js-yaml": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
